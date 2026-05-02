@@ -1,11 +1,6 @@
-weight = [0.1, 0.2, 0]
+from services.w_sum import w_sum
 
-def w_sum(a: list[float], b: list[float]) -> float:
-    assert len(a) == len(b)
-    output = 0
-    for i in range(len(a)):
-        output += a[i] * b[i]
-    return output
+weight = [0.1, 0.2, 0]
 
 def neural_network(input: list[float], weight: list[float]) -> float:
     pred = w_sum(input, weight)
